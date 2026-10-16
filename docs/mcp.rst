@@ -14,7 +14,7 @@ In the participation repository, run:
    make sync
    cp .env.example .env
    # Edit .env and fill in API_BASE, API_KEY
-   # MODEL_NAME="deepseek-v4-flash"
+   # MODEL_NAME="deepseek-v4.1-flash"
    make setup
 
 ``make setup`` will:
@@ -22,8 +22,8 @@ In the participation repository, run:
 1. Create a JiuwenSwarm named instance called ``career_emu``.
 2. Write ``career-emulator-engine-mcp`` into the instance's MCP config file.
 3. Sync the model variables from ``.env`` into the instance environment. The
-   official evaluation uses ``deepseek-v4-flash``, so set ``MODEL_NAME`` to
-   ``deepseek-v4-flash``.
+   official evaluation uses ``deepseek-v4.1-flash``, so set ``MODEL_NAME`` to
+   ``deepseek-v4.1-flash``.
 
 Start the instance:
 

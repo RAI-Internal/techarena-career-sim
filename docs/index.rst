@@ -31,8 +31,8 @@ Teams build one or more `Skills <https://agentskills.io>`_ to help the agent pla
 the game. The final deliverable is one or more skill folders, packaged into a
 single ``zip``.
 
-The official evaluation uses the ``deepseek-v4-flash`` base model. When
-developing locally, set ``MODEL_NAME`` to ``deepseek-v4-flash`` so your runs line
+The official evaluation uses the ``deepseek-v4.1-flash`` base model. When
+developing locally, set ``MODEL_NAME`` to ``deepseek-v4.1-flash`` so your runs line
 up with the cloud evaluation.
 
 Why it is worth playing seriously

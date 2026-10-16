@@ -52,7 +52,7 @@ cp .env.example .env
 ```bash
 API_BASE=""
 API_KEY=""
-MODEL_NAME="deepseek-v4-flash"
+MODEL_NAME="deepseek-v4.1-flash"
 ```
 
 Then run setup. It initializes the JiuwenSwarm named instance `career_emu` and writes the config into the instance directory:

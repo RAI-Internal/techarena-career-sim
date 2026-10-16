@@ -44,14 +44,14 @@ This installs `career-emulator-engine <https://pypi.org/project/career-emulator-
 dev data), ``uv``, and the rest of the project dependencies.
 
 Then configure your environment variables (model API, etc.). The official
-evaluation uses ``deepseek-v4-flash``; set ``MODEL_NAME`` to the same model for
+evaluation uses ``deepseek-v4.1-flash``; set ``MODEL_NAME`` to the same model for
 local development:
 
 .. code-block:: bash
 
    cp .env.example .env
    # Edit .env and fill in API_BASE, API_KEY
-   # MODEL_NAME="deepseek-v4-flash"
+   # MODEL_NAME="deepseek-v4.1-flash"
    make setup
 
 ``make setup`` initializes the JiuwenSwarm named instance ``career_emu`` and
