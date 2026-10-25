@@ -1,0 +1,82 @@
+[project]
+name = "techarena-career-sim"
+version = "0.0.0"
+description = "TechArena Career Survival Agent: a workplace simulation game for agents. Play a new hire on a product R&D team over 48 months, handling story events, spending quarterly energy, choosing a main action, and keeping a barely decent balance among health, dignity, skill, network, output, and wealth."
+keywords = [
+    "python", "client", "agent", "llm", "techarena", "career-survival-agent", "skill",
+    "mcp", "mcp client", "mcp server", "fastmcp", "model context protocol",
+]
+readme = "README.md"
+requires-python = ">=3.11,<4"
+license = "MIT"
+authors = [
+    {name = "Hugo", email = "hugo@hugohuang.com"},
+    {name = "Yuwei", email = "yuwei.willow.z@gmail.com"},
+]
+classifiers = [
+    'Development Status :: 4 - Beta',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: Implementation :: CPython',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3 :: Only',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+    'Programming Language :: Python :: 3.14',
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Intended Audience :: Developers",
+    "Typing :: Typed",
+]
+dependencies = [
+    "pip",
+    "fastmcp>=2,<3",
+    "career-emulator-techarena==1.0.8",
+    "career-emulator-engine[mcp]==1.0.6",
+    "jiuwenswarm==0.2.4.beta3",
+    "rich>=13",
+    "pyyaml",
+]
+
+[dependency-groups]
+# Testing
+test = [
+    "pytest", "pytest-asyncio", "pytest-mock"
+]
+
+# Formatting
+format = [
+    "ruff",
+    "mypy",
+    "types-aiofiles",
+    "types-pyyaml",
+    "msgpack-types",
+]
+
+dev = [
+    { include-group = "test" },
+    { include-group = "format" },
+]
+
+[project.urls]
+Homepage = "https://github.com/RAI-Internal/techarena-career-sim"
+Documentation = "https://techarena-career-sim.readthedocs.io/en/latest/"
+Source = "https://github.com/RAI-Internal/techarena-career-sim"
+
+[tool.uv]
+default-groups = ['dev']
+
+[tool.setuptools.package-data]
+career_sim_runner = ["prompts/*.md"]
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+addopts = ["-v"]
+
+# Formatting
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
